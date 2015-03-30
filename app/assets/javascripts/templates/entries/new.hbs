@@ -1,0 +1,61 @@
+<div class="row entry submit">
+
+  <div class="title">Submit</div>
+  <hr>
+
+  {{#if isAdding}}
+    Adding ...
+  {{else}}
+    <div class="alert alert-info">
+      Tips before you hit <strong>Submit</strong>:
+      <br><br>
+      <ul>
+        <li>We support markdown so use that to format your entry</li>
+        <li>Use the live preview area below to make sure all of the formatting and links are working correctly</li>
+      </ul>
+    </div>
+
+    <form {{action "createEntry" on="submit" }} class="form-horizontal">
+      {{#unless session.isAuthenticated}}
+        <div class="control-group">
+          <label class="control-label" for="inputAuthor">Author</label>
+          <div class="controls">
+            {{input type="text" value=authorName id="inputAuthor" placeholder="Author"}}
+          </div>
+        </div>
+      {{/unless}}
+      <div class="control-group">
+        <label class="control-label" for="inputTitle">Title</label>
+        <div class="controls">
+          {{input type="text" value=title id="inputTitle" placeholder="Title"}}
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="inputBody">Content</label>
+        <div class="controls">
+          {{textarea value=body id="inputBody" placeholder="Content"}}
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          {{input type="submit" value="Submit" disabled=fieldsEmpty class="btn"}}
+          or
+          {{link-to "Cancel" "entries"}}
+        </div>
+      </div>
+    </form>
+
+    <hr>
+
+    <div class="preview-area">
+      {{#if body}}
+        {{format-markdown body}}
+      {{else}}
+        <div class="info-message">
+          Live preview area. Enter some text in the textarea above and watch me change
+        </div>
+      {{/if}}
+    </div>
+
+  {{/if}}
+</div>
