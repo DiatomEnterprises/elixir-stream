@@ -2,10 +2,21 @@
 @import "font-awesome";
 @import "tipsy";
 
+.diatom{
+  background-color: #e67f34; 
+  width: 320px; 
+  height: 136px; 
+  display: inline-block;
+  background-image: url("diatom.png");
+  background-repeat:no-repeat;
+  background-position: center; 
+  margin: 10px;
+}
+
 hr { border-top: 1px solid #452057; }
 
 body {
-  background-color: #fff;
+  background-color: #E5E9EC;
   font-family: 'Open Sans', sans-serif;
 }
 
