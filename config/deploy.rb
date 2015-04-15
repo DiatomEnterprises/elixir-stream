@@ -7,7 +7,7 @@ set :log_level, :debug
 set :puma_init_active_record, true
 set :puma_workers, 4
 set :puma_threads, [4, 32]
-set :nginx_server_name, '188.166.114.63'
+set :nginx_server_name, 'elixirstream.com'
 
 set :linked_files, %w{ config/database.yml config/secrets.yml db/production.sqlite3 }
 set :linked_dirs, %w{ log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads }
