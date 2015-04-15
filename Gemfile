@@ -18,8 +18,16 @@ gem 'jquery-rails'
 gem 'ember-rails'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: '0-8-stable'
 
-gem "thin"
+gem 'puma'
 gem 'rename'
+
+# ----------------------Deploy-------------------------------
+gem 'capistrano'
+gem 'capistrano-rvm'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
+gem 'capistrano3-puma'
+# -----------------------------------------------------------
 
 group :development do
   gem "quiet_assets"

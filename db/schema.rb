@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140324134145) do
 
-  create_table "entries", force: true do |t|
+  create_table "entries", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "author_name"
     t.string   "title"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20140324134145) do
 
   add_index "entries", ["slug"], name: "index_entries_on_slug", unique: true
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "password_digest"
     t.string   "email"
