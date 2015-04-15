@@ -9,7 +9,7 @@ set :puma_workers, 4
 set :puma_threads, [4, 32]
 set :nginx_server_name, '188.166.114.63'
 
-set :linked_files, %w{ config/database.yml config/secrets.yml }
+set :linked_files, %w{ config/database.yml config/secrets.yml db/production.sqlite3 }
 set :linked_dirs, %w{ log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads }
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
