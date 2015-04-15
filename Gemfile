@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 gem 'responders', '~> 2.0.0'
 gem 'bcrypt', '~> 3.1.2'
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.10'
 gem "friendly_id", "~> 5.0.3"
 gem "prerender_rails"
 gem "redcarpet", "~> 3.1.1"
@@ -18,18 +18,18 @@ gem 'jquery-rails'
 gem 'ember-rails'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: '0-8-stable'
 
-gem 'puma'
+gem 'puma', '~> 2.11.2'
 gem 'rename'
 
-# ----------------------Deploy-------------------------------
-gem 'capistrano'
-gem 'capistrano-rvm'
-gem 'capistrano-rails'
-gem 'capistrano-bundler'
-gem 'capistrano3-puma'
-# -----------------------------------------------------------
 
 group :development do
+# ----------------------Deploy-------------------------------
+gem 'capistrano', '~> 3.4.0'
+gem 'capistrano-rvm', '~> 0.1.2'
+gem 'capistrano-rails', '~> 1.1.2'
+gem 'capistrano-bundler', '~> 1.1.4'
+gem 'capistrano3-puma', '~> 0.9.0'
+# -----------------------------------------------------------
   gem "quiet_assets"
   gem "pry-rails"
 end

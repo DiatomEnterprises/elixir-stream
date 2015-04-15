@@ -4,6 +4,10 @@ lock '3.4.0'
 set :application, 'elixirstream'
 set :repo_url, 'git@github.com:DiatomEnterprises/elixir-stream.git'
 set :log_level, :debug
+set :puma_init_active_record, true
+set :puma_workers, 4
+set :puma_threads, [4, 32]
+set :nginx_server_name, '188.166.114.63'
 
 set :linked_files, %w{ config/database.yml config/secrets.yml }
 set :linked_dirs, %w{ log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads }
