@@ -142,6 +142,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus {
   .navbar-inner {
     min-height: 80px;
     background: #452057;
+    font-style: normal;
     color: #fff;
     font-size: 16px;
 
@@ -156,6 +157,8 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus {
     .brand {
       font-weight: bold;
       color: #fff;
+      text-decoration: none;
+      font-style: normal;
       padding: 10px 20px 10px 0;
     }
 
@@ -167,6 +170,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus {
       text-shadow: none;
       // font-size: 15px;
       color: #fff;
+      font-style: normal;
 
       &:hover {
         text-decoration: underline;
