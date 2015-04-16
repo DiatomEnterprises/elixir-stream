@@ -8,7 +8,7 @@ ElixirStream.ApplicationRoute = Ember.Route.extend(SimpleAuth.ApplicationRouteMi
       if (tokens.length) {
         document.title = tokens.join(' - ') + " - ElixirStream";
       } else {
-        document.title = "ElixirStream - Community driven place for all things Ember.js";
+        document.title = "ElixirStream - Community driven place for all things Elixir";
       }
     }
   }
