@@ -6,8 +6,8 @@ ElixirStream.TwitterShareButtonComponent = Ember.Component.extend({
   "data-text": function() {
     return this.get("title") + " -";
   }.property("title"),
-  "data-hashtags": "emberjs",
-  "data-via": "emberflare_com",
+  "data-hashtags": "elixirlang",
+  "data-via": "elixirstream",
 
   title: "",
 
